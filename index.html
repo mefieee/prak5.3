@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-color: #f0c5c5;
+        color: #4c9cc4;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      ul{
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const constants = [
+{ text: "Значення константи π", num: Math.PI },
+      { text: "Значення константи е", num: Math.E },
+      {
+        text: "Десятковий логарифм постійної Ейлера (е)",
+        num: Math.log10(Math.E),
+      },
+      { text: "Корінь квадратний з однієї другої", num: Math.sqrt(1 / 2) },
+      { text: "Натуральний логарифм числа 10", num: Math.log(10) },
+      { text: "Натуральний логарифм числа 2", num: Math.log(2) },
+      { text: "Корінь квадратний із двох ", num: Math.sqrt(2) },
+{
+        text: "Двійковий логарифм постійної Ейлера (е)",
+        num: Math.log2(Math.E),
+      },
+      
+    ];
+
+    const funcs = [
+      {
+        text: "Результат обчислення модуля -9",
+        num: Math.abs(-9),
+      },
+      {
+        text: "Результат обчислення косинуса нуля радіан",
+        num: Math.cos(0),
+      },
+      {
+        text: "Косинус 180 градусів (π радіан)",
+        num: Math.cos(Math.PI),
+      },
+      {
+        text: "Результат обчислення арккосинуса нуля",
+        num: Math.acos(0),
+      },
+      {
+        text: "Результат обчислення синуса нуля радіан",
+        num: Math.sin(0),
+      },
+    ];
+    const random =  [
+      {
+        text: "Випадкове число в інтервалі [0;1]",
+        num: Math.random(),
+      },
+    ];
+
+    const ul1 = document.createElement("ul");
+    const ul2 = document.createElement("ul");
+    const ul3 = document.createElement("ul");
+
+    constants.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text} = ${el.num}`;
+      ul1.appendChild(li);
+    });
+    document.body.appendChild(ul1);
+
+    funcs.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text}: y = ${el.num}`;
+      ul2.appendChild(li);
+    });
+    document.body.appendChild(ul2);
+
+    random.forEach((el) => {
+      const li = document.createElement("li");
+      li.textContent = `${el.text}: y = ${el.num}`;
+      ul3.appendChild(li);
+    });
+    document.body.appendChild(ul3);
+  </script>
+</html>
